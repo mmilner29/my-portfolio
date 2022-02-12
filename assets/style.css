@@ -5,575 +5,221 @@
     --tertiary-color: #30362C;
     --quaternary-color: #586053;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
 
-/* For mobile phones and mobile first design*/
-@media only screen and (max-width: 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+body {
+    color: var(--quaternary-color);
+    /*Assigns a font and a back-up font if the first isn't supported by the browser*/
+    font-family: "Inter", sans-serif;
+}
 
-    body {
-        color: var(--quaternary-color);
-        /*Assigns a font and a back-up font if the first isn't supported by the browser*/
-        font-family: "Inter", sans-serif;
-    }
-    
-    header {
-        background-color: var(--primary-color);
-        padding: 20px 35px;
-        /* Allows for header elements to appear side by side & wrap around as the screen size shrinks */
-        display: flex;
-        flex-wrap: wrap-reverse;
-        /*Justifies header sections to the left & right side of the page*/
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    header a {
-        /*Removes default styling for links*/
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-    
-    header h1 {
-        font-weight: bold;
-        font-size: 36px;
-        color: var(--tertiary-color);
-    }
-    
-    /* Remove default list styling*/
-    header nav ul {
-        list-style: none;
-    }
+header {
+    padding: 20px 35px;
+    /* Allows for header elements to appear side by side & wrap around as the screen size shrinks */
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /*Justifies header sections to the left & right side of the page*/
+    justify-content: space-between;
+    align-items: center;
+}
 
-    header nav ul li {
-        padding: 10px;
-        text-align: center;
-    }
+header a {
+    /*Removes default styling for links*/
+    text-decoration: none;
+    color: var(--quaternary-color);
+}
 
-    .bio-section {
-        background-color: var(--primary-color);
-        /*Flex-wrap is allowing the bio-text to wrap around under the bio-img*/
-        display: flex;
-        flex-wrap: wrap;
-    }
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--tertiary-color);
+}
 
-    /* Width of img will take up 100% of screen*/
+/* Remove default list styling*/
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.bio-section {
+    /*Flex-wrap is allowing the bio-text to wrap around under the bio-img*/
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Width of img will take up 70% of space*/
+.bio-section img {
+    max-width: 70%;
+    padding: 30px;
+}
+
+.bio-text {
+    margin: 7px 7px 14px 7px;
+    /*Center aligns the Bio text section*/
+    text-align:center;
+}
+
+.bio-text h2 {
+    padding: 7px;
+    font-size: 30px;
+    color: var(--tertiary-color);
+}
+
+.bio-text p {
+    padding: 7px;
+}
+
+.project-section {
+    margin: 20px;
+    padding: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-section h2 {
+    color: var(--tertiary-color);
+    padding: 0 7px 7px 7px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.project-section h3 {
+    text-decoration: none;
+}
+
+.run-buddy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.run-buddy h3 {
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+    border-bottom: 3px solid; 
+}
+
+.run-buddy a {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.run-buddy a img {
+    max-width: 70%;
+}
+
+.other-examples {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.other-examples article {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.other-examples h3 {
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+    border-bottom: 3px solid;
+}
+
+.other-examples article img {
+    max-width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    padding: 25px 30px;
+}
+
+footer h2 {
+    display: flex;
+    color: var(--tertiary-color);
+    font-size: 30px;
+    text-align: center;
+    max-width: fit-content;
+}
+
+footer p {
+    max-width:fit-content;
+    text-align: right;
+    line-height: 1.5;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--quaternary-color);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    padding: 5px 50px;
+}
+
+@media only screen and (max-width: 980px) {
     .bio-section img {
+        max-width: 80%;
+        padding: 10px
+    }
+
+    .run-buddy a img {
         max-width: 100%;
     }
 
-    .bio-text {
-        margin: 7px 7px 14px 7px;
-        /*Center aligns the Bio text section*/
-        text-align:center;
-    }
-
-    .bio-text h2 {
-        padding: 7px;
-        color: var(--tertiary-color);
-    }
-
-    .bio-text p {
-        padding: 7px;
-    }
-
-    .project-section {
-        padding: 7px 0;
-        background-color: var(--primary-color);
+    .other-examples {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .project-section h2 {
-        color: var(--tertiary-color);
-        padding: 0 7px 7px 7px;
-        align-items: center;
-    }
-
-    .other-examples article {
-        padding: 10px;
-        display: flex;
-        display: flex-wrap;
-        justify-content: space-around;
-        align-items: center;
     }
 
     .other-examples article img {
-        max-width: 50%;
+        max-width: 60%;
     }
-
-    .run-buddy {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .run-buddy img {
-        max-width: 70%;
-    }
-
-
-    .reach-me-section {
-        background-color: var(--primary-color);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        align-items: center;
-        padding: 25px 30px
-    }
-
-    .reach-me-section h2 {
-        color: var(--tertiary-color);
-        text-align: center;
-    }
-
-    .reach-me-section a {
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-
-    .reach-me-section ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .reach-me-section ul li {
-        padding: 5px 20px;
-    }
-
 }
-
-@media only screen and (min-width: 600px) {
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        color: var(--quaternary-color);
-        /*Assigns a font and a back-up font if the first isn't supported by the browser*/
-        font-family: "Inter", sans-serif;
-    }
-    
-    header {
-        background-color: var(--primary-color);
-        padding: 20px 35px;
-        /* Allows for header elements to appear side by side & wrap around as the screen size shrinks */
-        display: flex;
-        flex-wrap: wrap-reverse;
-        /*Justifies header sections to the left & right side of the page*/
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    header a {
-        /*Removes default styling for links*/
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-    
-    header h1 {
-        font-weight: bold;
-        font-size: 36px;
-        color: var(--tertiary-color);
-    }
-    
-    /* Remove default list styling*/
+@media only screen and (max-width: 768px) {
     header nav ul {
         list-style: none;
-    }
-
-    header nav ul li {
-        padding: 10px;
-        text-align: center;
+        display: block;
     }
 
     .bio-section {
-        background-color: var(--primary-color);
-        /*Flex-wrap is allowing the bio-text to wrap around under the bio-img*/
-        display: flex;
         flex-wrap: wrap;
     }
 
-    /* Width of img will take up 100% of screen*/
     .bio-section img {
         max-width: 100%;
-    }
-
-    .bio-text {
-        margin: 7px 7px 14px 7px;
-        /*Center aligns the Bio text section*/
-        text-align:center;
-    }
-
-    .bio-text h2 {
-        padding: 7px;
-        color: var(--tertiary-color);
-    }
-
-    .bio-text p {
-        padding: 7px;
-    }
-
-    .project-section {
-        padding: 7px 0;
-        background-color: var(--primary-color);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .project-section h2 {
-        color: var(--tertiary-color);
-        padding: 0 7px 7px 7px;
-        align-items: center;
-    }
-
-    .other-examples article {
-        padding: 10px;
-        display: flex;
-        display: flex-wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .other-examples article img {
-        max-width: 50%;
-    }
-
-    .run-buddy {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .run-buddy img {
-        max-width: 70%;
-    }
-
-
-    .reach-me-section {
-        background-color: var(--primary-color);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        align-items: center;
-        padding: 25px 30px
-    }
-
-    .reach-me-section h2 {
-        color: var(--tertiary-color);
-        text-align: center;
-    }
-
-    .reach-me-section a {
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-
-    .reach-me-section ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .reach-me-section ul li {
-        padding: 5px 20px;
-    }
-
-}
-
-@media only screen and (min-width: 768px) {
-
-    * {
-        margin: 0;
         padding: 0;
-        box-sizing: border-box;
     }
+}
 
-    body {
-        color: var(--quaternary-color);
-        /*Assigns a font and a back-up font if the first isn't supported by the browser*/
-        font-family: "Inter", sans-serif;
-    }
-    
-    header {
-        background-color: var(--primary-color);
-        padding: 20px 35px;
-        /* Allows for header elements to appear side by side & wrap around as the screen size shrinks */
-        display: flex;
-        flex-wrap: wrap-reverse;
-        /*Justifies header sections to the left & right side of the page*/
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    header a {
-        /*Removes default styling for links*/
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-    
-    header h1 {
-        font-weight: bold;
-        font-size: 36px;
-        color: var(--tertiary-color);
-    }
-    
-    /* Remove default list styling*/
-    header nav ul {
-        list-style: none;
-    }
-
-    header nav ul li {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .bio-section {
-        background-color: var(--primary-color);
-        /*Flex-wrap is allowing the bio-text to wrap around under the bio-img*/
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* Width of img will take up 100% of screen*/
-    .bio-section img {
-        max-width: 100%;
-    }
-
-    .bio-text {
-        margin: 7px 7px 14px 7px;
-        /*Center aligns the Bio text section*/
-        text-align:center;
-    }
-
-    .bio-text h2 {
-        padding: 7px;
-        color: var(--tertiary-color);
-    }
-
-    .bio-text p {
-        padding: 7px;
-    }
-
-    .project-section {
-        padding: 7px 0;
-        background-color: var(--primary-color);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .project-section h2 {
-        color: var(--tertiary-color);
-        padding: 0 7px 7px 7px;
-        align-items: center;
-    }
-
-    .other-examples article {
-        padding: 10px;
-        display: flex;
-        display: flex-wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .other-examples article img {
-        max-width: 50%;
-    }
-
-    .run-buddy {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .run-buddy img {
-        max-width: 70%;
-    }
-
-
-    .reach-me-section {
-        background-color: var(--primary-color);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        align-items: center;
-        padding: 25px 30px
-    }
-
-    .reach-me-section h2 {
-        color: var(--tertiary-color);
-        text-align: center;
-    }
-
-    .reach-me-section a {
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-
-    .reach-me-section ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .reach-me-section ul li {
-        padding: 5px 20px;
-    }
+@media only screen and (max-width: 575px) {
 
 }
 
-@media only screen and (min-width: 980px) {
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        color: var(--quaternary-color);
-        /*Assigns a font and a back-up font if the first isn't supported by the browser*/
-        font-family: "Inter", sans-serif;
-    }
-    
-    header {
-        background-color: var(--primary-color);
-        padding: 20px 35px;
-        /* Allows for header elements to appear side by side & wrap around as the screen size shrinks */
-        display: flex;
-        flex-wrap: wrap-reverse;
-        /*Justifies header sections to the left & right side of the page*/
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    header a {
-        /*Removes default styling for links*/
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-    
-    header h1 {
-        font-weight: bold;
-        font-size: 36px;
-        color: var(--tertiary-color);
-    }
-    
-    /* Remove default list styling*/
-    header nav ul {
-        list-style: none;
-    }
-
-    header nav ul li {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .bio-section {
-        background-color: var(--primary-color);
-        /*Flex-wrap is allowing the bio-text to wrap around under the bio-img*/
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /* Width of img will take up 100% of screen*/
-    .bio-section img {
-        max-width: 100%;
-    }
-
-    .bio-text {
-        margin: 7px 7px 14px 7px;
-        /*Center aligns the Bio text section*/
-        text-align:center;
-    }
-
-    .bio-text h2 {
-        padding: 7px;
-        color: var(--tertiary-color);
-    }
-
-    .bio-text p {
-        padding: 7px;
-    }
-
-    .project-section {
-        padding: 7px 0;
-        background-color: var(--primary-color);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .project-section h2 {
-        color: var(--tertiary-color);
-        padding: 0 7px 7px 7px;
-        align-items: center;
-    }
-
-    .other-examples article {
-        padding: 10px;
-        display: flex;
-        display: flex-wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .other-examples article img {
-        max-width: 50%;
-    }
-
-    .run-buddy {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .run-buddy img {
-        max-width: 70%;
-    }
-
-
-    .reach-me-section {
-        background-color: var(--primary-color);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
-        align-items: center;
-        padding: 25px 30px
-    }
-
-    .reach-me-section h2 {
-        color: var(--tertiary-color);
-        text-align: center;
-    }
-
-    .reach-me-section a {
-        text-decoration: none;
-        color: var(--quaternary-color);
-    }
-
-    .reach-me-section ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .reach-me-section ul li {
-        padding: 5px 20px;
-    }
-
-}
