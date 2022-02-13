@@ -50,6 +50,7 @@ header nav ul {
 header nav ul li {
     padding: 10px 20px;
     text-align: center;
+    font-weight: bold;
 }
 
 .bio-section {
@@ -57,24 +58,25 @@ header nav ul li {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    padding: 20px;
 }
 
 /* Width of img will take up 70% of space*/
 .bio-section img {
-    max-width: 70%;
-    padding: 30px;
+    max-width: 80%;
 }
 
 .bio-text {
-    margin: 7px 7px 14px 7px;
     /*Center aligns the Bio text section*/
-    text-align:center;
+    text-align: left;
+    padding: 10px;
 }
 
 .bio-text h2 {
-    padding: 7px;
-    font-size: 30px;
+    padding: 14px 7px;
+    font-size: 40px;
     color: var(--tertiary-color);
+
 }
 
 .bio-text p {
@@ -122,8 +124,12 @@ header nav ul li {
 
 .run-buddy a img {
     max-width: 70%;
+    opacity: 100%;
 }
 
+.run-buddy a img:hover {
+    opacity: 70%;
+}
 .other-examples {
     display: flex;
     flex-wrap: nowrap;
@@ -145,49 +151,52 @@ header nav ul li {
 
 .other-examples article img {
     max-width: 100%;
+    opacity: 100%;
+}
+
+.other-examples article img:hover {
+    opacity: 70%;
 }
 
 footer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
+    flex-wrap:wrap;
+    justify-content: space-between;
     align-items: center;
     padding: 25px 30px;
 }
 
 footer h2 {
-    display: flex;
+    font-weight: bold;
     color: var(--tertiary-color);
     font-size: 30px;
-    text-align: center;
-    max-width: fit-content;
-}
-
-footer p {
-    max-width:fit-content;
-    text-align: right;
-    line-height: 1.5;
 }
 
 footer a {
+    /*Removes default styling for links*/
     text-decoration: none;
     color: var(--quaternary-color);
 }
 
-footer ul {
+footer div ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
 
-footer ul li {
-    padding: 5px 50px;
+footer div ul li {
+    padding: 5px 25px;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 980px) {
     .bio-section img {
         max-width: 80%;
         padding: 10px
+    }
+
+    .bio-text h2 {
+        font-size: 30px;
     }
 
     .run-buddy a img {
@@ -217,9 +226,11 @@ footer ul li {
         max-width: 100%;
         padding: 0;
     }
+
+    .bio-text {
+        text-align: center;
+    }
+
 }
 
-@media only screen and (max-width: 575px) {
-
-}
 
