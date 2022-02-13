@@ -13,7 +13,7 @@ https://mmilner29.github.io/my-portfolio/
 
 ## Preview
 
-
+![Website Preview](/assets/images/portfolio-preview.png)
 
 ## Contribution
 Made with ❤️ by Madi Milner

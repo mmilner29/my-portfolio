@@ -35,6 +35,7 @@ header a {
 }
 
 header h1 {
+    /*Makes text bold*/
     font-weight: bold;
     font-size: 36px;
     color: var(--tertiary-color);
@@ -61,7 +62,7 @@ header nav ul li {
     padding: 20px;
 }
 
-/* Width of img will take up 70% of space*/
+/* Width of img will take up 80% of space*/
 .bio-section img {
     max-width: 80%;
 }
@@ -95,10 +96,12 @@ header nav ul li {
     color: var(--tertiary-color);
     padding: 0 7px 7px 7px;
     font-size: 30px;
+    /*Makes items center align on the vertical axis*/
     align-items: center;
 }
 
 .project-section h3 {
+    /*Removes default styling*/
     text-decoration: none;
 }
 
@@ -113,7 +116,8 @@ header nav ul li {
 .run-buddy h3 {
     padding-bottom: 2px;
     margin-bottom: 6px;
-    border-bottom: 3px solid; 
+    /*Adds underline to H3*/
+    border-bottom: 2px solid; 
 }
 
 .run-buddy a {
@@ -124,10 +128,12 @@ header nav ul li {
 
 .run-buddy a img {
     max-width: 70%;
+    /*Make image completely opaque*/
     opacity: 100%;
 }
 
 .run-buddy a img:hover {
+    /*Make image slightly transparent when you hover over*/
     opacity: 70%;
 }
 .other-examples {
@@ -146,7 +152,8 @@ header nav ul li {
 .other-examples h3 {
     padding-bottom: 2px;
     margin-bottom: 6px;
-    border-bottom: 3px solid;
+    /*Underlines H3 titles*/
+    border-bottom: 2px solid;
 }
 
 .other-examples article img {
@@ -155,6 +162,7 @@ header nav ul li {
 }
 
 .other-examples article img:hover {
+    /*Make image slightly transparent when you hover over*/
     opacity: 70%;
 }
 
@@ -188,6 +196,8 @@ footer div ul li {
     padding: 5px 25px;
     font-weight: bold;
 }
+
+/* Media Queries to adjust for smaller screens*/
 
 @media only screen and (max-width: 980px) {
     .bio-section img {
