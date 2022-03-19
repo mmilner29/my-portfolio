@@ -9,13 +9,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--primary-color);
 }
 
 body {
     color: var(--quaternary-color);
     /*Assigns a font and a back-up font if the first isn't supported by the browser*/
     font-family: "Inter", sans-serif;
+    background-color: var(--primary-color);
 }
 
 header {
@@ -34,6 +34,21 @@ header a {
     color: var(--quaternary-color);
 }
 
+header a {
+    /*Removes default styling for links*/
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--quaternary-color);
+}
+
+header a:hover {
+    /*Removes default styling for links*/
+    text-decoration: none;
+    color: var(--quaternary-color);
+    background-color: var(--secondary-color);
+}
+
 header h1 {
     /*Makes text bold*/
     font-weight: bold;
@@ -49,7 +64,6 @@ header nav ul {
 }
 
 header nav ul li {
-    padding: 10px 20px;
     text-align: center;
     font-weight: bold;
 }
@@ -60,11 +74,14 @@ header nav ul li {
     flex-wrap: nowrap;
     align-items: center;
     padding: 20px;
+    margin: 20px 30px 30px 30px;
+    background-color: var(--primary-color);
 }
 
 /* Width of img will take up 80% of space*/
 .bio-section img {
     max-width: 80%;
+    box-shadow: 2px 2px 3px #586053;
 }
 
 .bio-text {
@@ -85,17 +102,18 @@ header nav ul li {
 }
 
 .project-section {
-    margin: 20px;
-    padding: 7px 0;
+    margin: 30px 30px 20px 30px;
+    padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: var(--primary-color);
 }
 
 .project-section h2 {
     color: var(--tertiary-color);
-    padding: 0 7px 7px 7px;
-    font-size: 30px;
+    padding: 0 7px 20px 7px;
+    font-size: 40px;
     /*Makes items center align on the vertical axis*/
     align-items: center;
 }
@@ -105,20 +123,41 @@ header nav ul li {
     text-decoration: none;
 }
 
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-weight: bolder;
+    color: floralwhite;
+    opacity: 100%;
+    text-shadow: 2px 2px 3px #000000;
+  }
+
+  .rh-centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bolder;
+    color: floralwhite;
+    opacity: 100%;
+    text-shadow: 2px 2px 3px #000000;
+  }
+
+
 .run-buddy {
     display: flex;
+    position:relative;
+    text-align: center;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    
 }
 
-.run-buddy h3 {
-    padding-bottom: 2px;
-    margin-bottom: 6px;
-    /*Adds underline to H3*/
-    border-bottom: 2px solid; 
-}
 
 .run-buddy a {
     display: flex;
@@ -129,19 +168,23 @@ header nav ul li {
 .run-buddy a img {
     max-width: 70%;
     /*Make image completely opaque*/
-    opacity: 100%;
+    opacity: 80%;
+    box-shadow: 2px 2px 3px #586053;
 }
 
 .run-buddy a img:hover {
     /*Make image slightly transparent when you hover over*/
-    opacity: 70%;
-}
-.other-examples {
-    display: flex;
-    flex-wrap: nowrap;
+    opacity: 100%;
 }
 
-.other-examples article {
+.recipe-hub {
+    display: flex;
+    flex-wrap: nowrap;
+    position:relative;
+    text-align: center;
+}
+
+.recipe-hub article {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -149,21 +192,23 @@ header nav ul li {
     align-items: center;
 }
 
-.other-examples h3 {
-    padding-bottom: 2px;
-    margin-bottom: 6px;
-    /*Underlines H3 titles*/
-    border-bottom: 2px solid;
+.recipe-hub a {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
-.other-examples article img {
-    max-width: 100%;
-    opacity: 100%;
+.recipe-hub article img {
+    max-width: 50%;
+    height: auto;
+    justify-content: center;
+    opacity: 80%;
+    box-shadow: 2px 2px 3px #586053;
 }
 
-.other-examples article img:hover {
+.recipe-hub article img:hover {
     /*Make image slightly transparent when you hover over*/
-    opacity: 70%;
+    opacity: 100%;
 }
 
 footer {
@@ -184,6 +229,13 @@ footer a {
     /*Removes default styling for links*/
     text-decoration: none;
     color: var(--quaternary-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+footer a:hover {
+    background-color: var(--secondary-color);
 }
 
 footer div ul {
@@ -193,7 +245,6 @@ footer div ul {
 }
 
 footer div ul li {
-    padding: 5px 25px;
     font-weight: bold;
 }
 
@@ -213,12 +264,12 @@ footer div ul li {
         max-width: 100%;
     }
 
-    .other-examples {
+    .recipe-hub {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .other-examples article img {
+    .recipe-hub article img {
         max-width: 60%;
     }
 }
